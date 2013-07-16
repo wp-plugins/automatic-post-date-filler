@@ -1,0 +1,16 @@
+.form-table {clear:none !important;}
+.inside .submit{padding:5px 0 0 0 !important;}
+.inside p {margin-bottom:0;}
+.postbox h3{cursor:default !important;}
+.postbox h3:hover{color: #464646 !important;}
+
+.apdf_help{cursor:help;padding:0px 4px;margin-left:10px;background:#c9c9c9;color:white;font-size:12px;font-family:Courier;font-weight:bold;border-radius:20px;}
+.apdf_help:hover{background:#a1a4c9;}
+
+.apdf_icon{background-image:url(../img/apdf_sprite_icons.png);background-repeat:no-repeat;width:16px;height:16px;float:left;margin-right:5px;}
+.apdf_wp{background-position: -34px 0px;}
+.apdf_rate{background-position: -51px 0px;}
+.apdf_twitter{background-position: -17px 0px;}
+.apdf_devtard{background-position: 0px 0px;}
+
+.apdf_already_installed{color:green;}
