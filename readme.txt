@@ -1,45 +1,46 @@
 === Automatic Post Date Filler ===
 Contributors: Devtard
 Donate link: http://devtard.com/donate
-Tags: automatic, custom, date, default, filler, future, future posts, override, planner, post, post status, schedule, scheduler, scheduled post, time
+Tags: automatic, custom, date, default, future, override, planner, post, schedule, scheduler, scheduled post, time
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: trunk
-License: GPLv2
+Tested up to: 4.3
+Stable tag: 1.1
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-This plugin automatically sets custom date and time when scheduling a post.
+Automatically sets custom date and time when editing posts.
 
 == Description ==
-With APDF you won't have to change the date and time of scheduled posts ever again. You just have to create simple rules and you are done. This plugin will **set the date and time automatically** when scheduling a post.
+This plugin **overrides default date and time** of edited posts with dynamically calculated custom values. This is useful especially when **scheduling posts**; the plugin can, for example, automatically generate new post dates by incrementing the current most future post date by a specified number of days.
 
-The customized date and time of scheduled posts will be automatically filled after clicking the "Edit" link next to "Publish immediately" in the Publish module. Users are still free to modify the value to whatever they want afterwards.
+Calculated custom date and time will automatically replace default values after clicking the "Edit" link next to "Publish immediately" in the post editor's Publish module.
 
 = Features =
-* You can set a certain time of day when posts should be published
-* Time inserted by APDF can be based on the current date/time or the date/time of the furthest schedulest post + specified number of days/minutes
-* Default values provided by WordPress will be overroden only when scheduling posts with posts statuses set by the user
+* Date/time values usable as a reference: current date/time, oldest or most future post date/time; specific time of day
+* Date/time of reference can be increased or decreased by a specific number of days/minutes
+* Configurable post types and statuses of analyzed and affected posts
 
-*Follow [@devtard_com](http://twitter.com/devtard_com) on Twitter or subscribe to my blog [devtard.com](http://devtard.com) to keep up to date on new releases and WordPress-related information.*
+See [Screenshots](https://wordpress.org/plugins/automatic-post-date-filler/screenshots/) for more information.
 
 == Installation ==
-1. Upload the plugin to the '/wp-content/plugins/' directory.
-2. Activate it through the 'Plugins' menu in WordPress.
-3. Configure the plugin (Settings -> Automatic Post Date Filler).
+1. Install and activate the plugin.
+2. Go to Settings > Automatic Post Date Filler to configure the plugin.
 
 == Screenshots ==
 1. Administration interface
-
-== Frequently Asked Questions ==
-= This plugin doesn't work without JavaScript, why? =
-There is no WP API that can be used to insert custom date and time when scheduling a post, that's why JavaScript is used.
-
-= Which plugin data is stored in the database? =
-Plugin settings can be found in the option "automatic_post_date_filler". It will be automatically removed from your database after you delete the plugin via your administration interface.
+2. Post editor's Publish module with custom time "00:00" filled in by the plugin
 
 == Changelog ==
+= 1.1 =
+* Full post type and post status support for analyzed and affected posts
+* Oldest post date/time can now be used as a date/time of reference
+* Modified timestamp values in the Publish module are now highlighted with a yellowish color
+* Minor appearance changes
+* Code refactored
+
 = 1.0 =
 * Initial release
 
 == Upgrade Notice ==
-= 1.0 =
-* Initial release
+= 1.1 =
+* New features
