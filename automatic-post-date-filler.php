@@ -48,7 +48,7 @@ class Automatic_Post_Date_Filler{
 			add_action('admin_init', array($this, 'admin_init_actions'));
 
 			global $pagenow;
-			if(in_array($pagenow, array('plugins.php', 'update-core.php', 'update.php')) or ($pagenow == 'options-general.php' and isset($_GET['page']) and $_GET['page'] == 'automatic-post-tagger')){
+			if(in_array($pagenow, array('plugins.php', 'update-core.php', 'update.php')) or ($pagenow == 'options-general.php' and isset($_GET['page']) and $_GET['page'] == 'automatic-post-date-filler')){
 				add_action('plugins_loaded', array($this, 'update_plugin'));
 			}
 		}
@@ -396,7 +396,7 @@ class Automatic_Post_Date_Filler{
 					$meta['admin_notice_update'] = 0; //hide update notice
 					update_option($this->get_variable('option_name_meta'), $meta);
 
-					echo $this->get_variable('message_note') .'<strong>What\'s new in APT v'. $meta['plugin_version'] .'?</strong><br />
+					echo $this->get_variable('message_note') .'<strong>What\'s new in APDF v'. $meta['plugin_version'] .'?</strong><br />
 
 					<ul class="apdf_custom_list">
 						<li>Full post type and post status support for analyzed and affected posts</li>
