@@ -465,7 +465,8 @@ class Automatic_Post_Date_Filler{
 	 * Registers the "post statuses" field on the options page
 	 */
 	public function affected_post_statuses_callback(){
-		$ouptut_array = $this->get_variable('settings_array')['affected_post_statuses'];
+		$settings = $this->get_variable('settings_array');
+		$ouptut_array = $settings['affected_post_statuses'];
 		$output_array_sanitized = array_map(array($this, 'sanitize_output_text'), $ouptut_array);
 		$output_array_to_string = implode(',', $output_array_sanitized);
 
@@ -476,7 +477,8 @@ class Automatic_Post_Date_Filler{
 	 * Registers the "post types" field on the options page
 	 */
 	public function affected_post_types_callback(){
-		$ouptut_array = $this->get_variable('settings_array')['affected_post_types'];
+		$settings = $this->get_variable('settings_array');
+		$ouptut_array = $settings['affected_post_types'];
 		$output_array_sanitized = array_map(array($this, 'sanitize_output_text'), $ouptut_array);
 		$output_array_to_string = implode(',', $output_array_sanitized);
 
@@ -487,7 +489,8 @@ class Automatic_Post_Date_Filler{
 	 * Registers the "post statuses" field on the options page
 	 */
 	public function analyzed_post_statuses_callback(){
-		$ouptut_array = $this->get_variable('settings_array')['analyzed_post_statuses'];
+		$settings = $this->get_variable('settings_array');
+		$ouptut_array = $settings['analyzed_post_statuses'];
 		$output_array_sanitized = array_map(array($this, 'sanitize_output_text'), $ouptut_array);
 		$output_array_to_string = implode(',', $output_array_sanitized);
 
@@ -498,7 +501,8 @@ class Automatic_Post_Date_Filler{
 	 * Registers the "post types" field on the options page
 	 */
 	public function analyzed_post_types_callback(){
-		$ouptut_array = $this->get_variable('settings_array')['analyzed_post_types'];
+		$settings = $this->get_variable('settings_array');
+		$ouptut_array = $settings['analyzed_post_types'];
 		$output_array_sanitized = array_map(array($this, 'sanitize_output_text'), $ouptut_array);
 		$output_array_to_string = implode(',', $output_array_sanitized);
 
@@ -509,9 +513,10 @@ class Automatic_Post_Date_Filler{
 	 * Registers the "custom date" field on the options page
 	 */
 	public function custom_date_callback(){
-		$custom_date_reference = $this->get_variable('settings_array')['custom_date_reference'];
-		$custom_date_operation = $this->get_variable('settings_array')['custom_date_operation'];
-		$custom_date_difference = $this->get_variable('settings_array')['custom_date_difference'];
+		$settings = $this->get_variable('settings_array');
+		$custom_date_reference = $settings['custom_date_reference'];
+		$custom_date_operation = $settings['custom_date_operation'];
+		$custom_date_difference = $settings['custom_date_difference'];
 
 		$custom_date_checked_1 = checked($custom_date_reference, 1, false);
 		$custom_date_checked_2 = checked($custom_date_reference, 2, false);
@@ -549,11 +554,12 @@ class Automatic_Post_Date_Filler{
 	 * Registers the "custom time" field on the options page
 	 */
 	public function custom_time_callback(){
-		$custom_time_reference = $this->get_variable('settings_array')['custom_time_reference'];
-		$custom_time_operation = $this->get_variable('settings_array')['custom_time_operation'];
-		$custom_time_difference = $this->get_variable('settings_array')['custom_time_difference'];
-		$custom_time_hours = $this->get_variable('settings_array')['custom_time_hours'];
-		$custom_time_minutes = $this->get_variable('settings_array')['custom_time_minutes'];
+		$settings = $this->get_variable('settings_array');
+		$custom_time_reference = $settings['custom_time_reference'];
+		$custom_time_operation = $settings['custom_time_operation'];
+		$custom_time_difference = $settings['custom_time_difference'];
+		$custom_time_hours = $settings['custom_time_hours'];
+		$custom_time_minutes = $settings['custom_time_minutes'];
 
 		$custom_time_checked_1 = checked($custom_time_reference, 1, false);
 		$custom_time_checked_2 = checked($custom_time_reference, 2, false);
